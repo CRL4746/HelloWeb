@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>calendar</title>
+    <style type="text/css">
+        *{margin: 0;padding: 0}
+        .wrap{
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            margin-left: -320px;
+            background: #6e6568;
+            width: 640px;
+            height: 360px;
+            /*margin: 0 auto;*/
+        }
+            .main_left{
+                float: left;
+                width: 300px;
+                height: 360px;
+                background: #8bc348;
+                /*box-shadow: -5px 0px 10px #8bc348 inset;*/
+                box-shadow: -5px 10px 10px #8bc348;
+            }
+                #Week{
+                    font-size: 50px;
+                    color: #fff;
+                    font-family: Arial;
+                    font-weight: normal;
+                    margin-left: 10px;
+                    line-height: 240px;
+                    text-shadow: 3px 0 3px #000;
+                    /*opacity: 0.7;*/
+                }
+                #month{
+                    font-family: '微软雅黑 Light';
+                    color: #fff;
+                    font-size: 49px;
+                    position: absolute;
+                    bottom: 40%;
+                    left: 10px;
+                    text-shadow: 2px 0 5px #000;
+                    /*opacity: 0.9;*/
+                }
+                .main_left_line{
+                    position: absolute;
+                    height: 3px;
+                    left: 10px;
+                    bottom: 150px;
+                    color: #fff;
+                }
+            .main_right{
+                float: right;
+                background: #fff;
+                width: 340px;
+                height: 360px;
+                box-shadow: 5px 10px 10px #f0f0f0;
+            }
+                #year{
+                    font-size: 30px;
+                    color: #6ac13c;
+                    font-family: Arial;
+                    position: absolute;
+                    right: 20px;
+                    top: 5px;
+                    opacity: 0.5;
+                }
+                .calendar{
+                    position: absolute;
+                    top:30%;
+                    right: 10px;
+                    width: 320px;
+                    height: 250px;
+                    background: #fff;
+                }
+                .title{
+                    height: 70px;
+                    border-bottom: 1px solid rgba(0,0,0,0.1);
+                    text-align: center;
+                    position: relative;
+                }
+                #calendar_title{
+                    font-size: 25px;
+                    font-family: Arial;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    padding: 14px 0 0 0;
+                }
+                #calendar_year{
+                    font-size: 15px;
+                    font-family: Arial;
+                    font-weight: normal;
+                }
+                #prev{
+                    text-indent: -9999px;
+                    position: absolute;
+                    left: 0;
+                    top:0;
+                    width: 60px;
+                    height: 70px;
+                    background: url("prev.png") no-repeat 50% 50%;
+                }
+                .body{
+                     padding: 10px 20px;
+                     }
+                #next{
+                    text-indent: -9999px;
+                    position: absolute;
+                    right: 0;
+                    top:0;
+                    width: 60px;
+                    height: 70px;
+                    background: url("next.png") no-repeat 50% 50%;
+                }
+                .body_list ul{
+                    width: 100%;
+                    font-family: Arial;
+                    font-weight: bold;
+                    font-size: 15px;
+                }
+                .body_list ul li{
+                    width: 14.28%;
+                    height: 20px;
+                    line-height: 30px;
+                    list-style-type: none;
+                    display: block;
+                    box-sizing: border-box;
+                    float: left;
+                    text-align: center;
+                }
+                .lightgrey{
+                    color: #a8a8a8;
+                }
+                .darkgrey{
+                    color: #565656;
+                }
+                .green{
+                    color: #6ac13c;
+                }
+    </style>
+</head>
+<body>
+<div id="wrap" class="wrap">
+    <div id="main_left" class="main_left">
+        <!--<input type="button" id="set">-->
+        <div id="left"></div>
+        <h2 id="Week" >CALENDAR</h2>
+        <span id="month" ></span>
+        <p class="main_left_line">———————————————</p>
+    </div>
+    <div id="main_right" class="main_right">
+        <span id="year">2017</span>
+        <div class="calendar">
+            <div class="title">
+                <h1 class="green" id="calendar_title">Month</h1>
+                <h2 class="green small" id="calendar_year">Year</h2>
+                <a href="" id="prev">Prev Month</a>
+                <a href="" id="next">Next Month</a>
+            </div>
+            <div class="body">
+                <div class="lightgrey body_list">
+                    <ul>
+                        <li>MON</li>
+                        <li>TUE</li>
+                        <li>WED</li>
+                        <li>THU</li>
+                        <li>FRI</li>
+                        <li>SAT</li>
+                        <li>SUN</li>
+                    </ul>
+                </div>
+                <div class="darkgrey body_list">
+                    <ul id="days">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var month_olympic = [31,29,31,30,31,30,31,31,30,31,30,31];
+    var month_normal = [31,28,31,30,31,30,31,31,30,31,30,31];
+    var month_name = ["January","Febrary","March","April","May","June","July","Auguest","September","October","November","December"];
+//    var week_name = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+    var holder = document.getElementById("days");
+    var prev = document.getElementById("prev");
+    var next = document.getElementById("next");
+    var ctitle = document.getElementById("calendar_title");
+    var cyear = document.getElementById("calendar_year");
+    var my_date = new Date();
+    var my_year = my_date.getFullYear();
+    var my_month = my_date.getMonth();
+    var my_day = my_date.getDate();
+//    var my_week = my_date.getDay();
+    var mainLeft_month = document.getElementById("month");
+    var mainRight_year = document.getElementById("year");
+    prev.onclick = function (e) {
+        e.preventDefault();
+        my_month--;
+        if (my_month<0) {
+            my_year--;
+            my_month = 11;
+        }
+        refreshDate();
+    }
+    next.onclick = function (e) {
+        e.preventDefault();
+        my_month++;
+        if (my_month>11) {
+            my_year ++;
+            my_month = 0;
+        }
+        refreshDate();
+    }
+    function refreshDate() {
+        var str = "";
+        var totalDay = daysMonth(my_month,my_year); //获取该月总天数
+        var firstDay = dayStart(my_month,my_year);   //获取该月第一天是星期几
+        var myclass;
+        for (var i = 1; i < firstDay; i++) {
+            str += "<li></li>"; //为起始日之前的日期创建空白节点
+        }
+        for (var i = 1; i <= totalDay; i++) {
+            if((i<my_day && my_year==my_date.getFullYear() && my_month==my_date.getMonth()) || my_year<my_date.getFullYear() || ( my_year==my_date.getFullYear() && my_month<my_date.getMonth())){
+                myclass = " class='lightgrey'"; //当该日期在今天之前时，以浅灰色字体显示
+            }else if (i==my_day && my_year==my_date.getFullYear() && my_month==my_date.getMonth()){
+                myclass = " class='green greenbox'"; //当该日期是当天时，以绿色背景突出显示
+            }else{
+                myclass = " class='darkgrey'"; //当该日期在今后之后时，以深灰字体显示
+            }
+            str += "<li"+myclass+">"+i+"</li>"; //创建日期节点
+        }
+        holder.innerHTML = str; //设置日期显示
+        ctitle.innerHTML = month_name[my_month];    //设置英文月份显示
+        cyear.innerHTML = my_year;  //设置年份显示
+        mainLeft_month.innerHTML = month_name[my_month];
+        mainRight_year.innerHTML = my_year;
+    }
+    //获取某年某月第一天是星期几
+    function dayStart(month,year) {
+        var tmpDate = new Date(year,month,1);
+        return (tmpDate.getDay());
+    }
+    //计算某年是不是闰年，通过求年份除以4的余数即可
+    function daysMonth (month,year) {
+        var tmp = year % 4;
+        if (tmp == 0) {
+            return (month_olympic[month]);
+        }else {
+            return (month_normal[month]);
+        }
+    }
+    refreshDate();
+</script>
+</body>
+</html>
