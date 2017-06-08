@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+		<title>商品分栏</title>
+		<!-- Bootstrap -->
+		<link href="disk/css/bootstrap.min.css" rel="stylesheet">
+		<!--指定web app 
+			viewport: 视口
+  		initial-scale ： 初始化比例
+  		maximum-scale ： 最大缩放比例
+  		user-scalable : 是否允许用户缩放
+  		-->
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+		<!-- 指定页面为 Web App -->
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+
+		<!--引入less-->
+		<link rel="stylesheet" type="text/less" href="mi.less" />
+		<script src="disk/js/less.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			body {
+				background-color: #F5F5F5;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--内容页   大中屏时，占3格，小屏以下占全屏-->
+		<section class="flcontentinfo col-lg-6 col-lg-offset-3 col-md-12  col-sm-12 col-xs-12">
+
+			<!--顶部个人界面-->
+			<section class="self-top">
+				<div class="self-topimg">
+					<img src="img/dsy/登陆－icon-01.png" alt="" />
+				</div>
+				<div>
+					<a href="login.html" style="text-decoration: none;color: white;">&nbsp;登录/注册</a>
+				</div>
+			</section>
+
+			<!--我的订单-->
+			<section class="self-content">
+				<span class="myorder-left">&emsp;我的订单</span>
+				<a href="login.html" style="text-decoration: none;color: black;"><span class="myorder-right"><small>全部订单&nbsp;</small><img src="img/jian.png"/>&emsp;</span></a>
+			</section>
+
+			<!--三个图标-->
+			<section class="self-icons">
+				<div class="self-icon">
+					<a href="login.html"><img src="img/dsy/待付款.png" alt="" /></a>
+					<p>待付款</p>
+				</div>
+				<div class="self-icon">
+					<a href="login.html"><img src="img/dsy/待收货.png" alt="" /></a>
+					<p>待收货</p>
+				</div>
+				<div class="self-icon">
+					<a href="login.html"><img src="img/dsy/扳手_线.png" alt="" /></a>
+					<p>退换修</p>
+				</div>
+			</section>
+
+			<!--我的优惠-->
+			<section class="self-discounts" style="margin-bottom: 10px;">
+				<div class="self-discount">
+					<img src="img/dsy/优惠.png" alt="" style="margin-left: 10px;" />&emsp;
+					<div>我的优惠</div>
+				</div>
+				<div>
+					<img src="img/jian.png" style="margin-right: 10px;" />
+				</div>
+			</section>
+
+			<!--服务中心+小米之家-->
+			<section class="self-discounts">
+				<div class="self-discount">
+					<img src="img/dsy/服务.png" alt="" style="margin-left: 10px;" />&emsp;
+					<div>服务中心</div>
+				</div>
+				<div>
+					<img src="img/jian.png" style="margin-right: 10px;" />
+				</div>
+			</section>
+			<div class="self-hr"></div>
+
+			<!--小米之家-->
+			<section class="self-discounts">
+				<div class="self-discount">
+					<img src="img/dsy/商家.png" alt="" style="margin-left: 10px;" />&emsp;
+					<div>小米之家</div>
+				</div>
+				<div>
+					<img src="img/jian.png" style="margin-right: 10px;" />
+				</div>
+			</section>
+
+			<!--设置-->
+			<section class="self-discounts" style="margin-top: 10px;">
+				<div class="self-discount">
+					<img src="img/dsy/设置.png" alt="" style="margin-left: 10px;" />&emsp;
+					<div>设置</div>
+				</div>
+				<div>
+					<img src="img/jian.png" style="margin-right: 10px;" />
+				</div>
+			</section>
+
+		</section>
+
+		<!--底部  占满全屏，伸缩-->
+		<section class="footombar">
+			<a href="MI.html">
+				<div class="foot">
+					<div style="background-image: url(img/sy/sy.png);" class="imgbox imgbox1"></div>
+					<a href="">首页</a>
+				</div>
+			</a>
+			<a href="classify.html">
+				<div class="foot">
+					<div style="background-image: url(img/sy/fl.png);" class="imgbox imgbox2"></div>
+					<a href="">分类</a>
+				</div>
+			</a>
+			<a href="car.html">
+				<div class="foot">
+					<div style="background-image: url(img/sy/gw.png);" class="imgbox imgbox3"></div>
+					<a href="car.html">购物车</a>
+				</div>
+			</a>
+			<a href="self.html">
+				<div class="foot">
+					<div style="background-image: url(img/sy/won.png);" class="imgbox imgbox4"></div>
+					<a href="self.html">我</a>
+				</div>
+			</a>
+		</section>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="disk/js/jquery-3.2.1.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="disk/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			$('.cartoon1').carousel({
+				interval: 1500
+			})
+			$('.cartoon2').carousel({
+				interval: 1800
+			})
+		</script>
+	</body>
+
+</html>

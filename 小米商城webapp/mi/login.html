@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+		<title>商品分栏</title>
+		<!-- Bootstrap -->
+		<link href="disk/css/bootstrap.min.css" rel="stylesheet">
+		<!--指定web app 
+			viewport: 视口
+  		initial-scale ： 初始化比例
+  		maximum-scale ： 最大缩放比例
+  		user-scalable : 是否允许用户缩放
+  		-->
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+		<!-- 指定页面为 Web App -->
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+
+		<!--引入less-->
+		<link rel="stylesheet" type="text/less" href="mi.less" />
+		<script src="disk/js/less.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			body {
+				background-color: #F5F5F5;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--内容页   大中屏时，占3格，小屏以下占全屏-->
+		<section class="flcontentinfo col-lg-6 col-lg-offset-3 col-md-12  col-sm-12 col-xs-12" style="background-color: #EEEEEE;height: 100vh;">
+
+			<!--登录界面-->
+			<section class="login-page">
+				<div id="lg-logo">
+					<img src="img/login/logo.png" />
+				</div>
+			<h4>小米账号登录</h4>
+			</section>
+			
+			<!--右上角二维码-->
+			<div class="code">
+				<img src="img/login/ewm.png"/>
+			</div>
+			
+			<!--登录框-->
+			<section class="login-box">
+				<input type="text" name="" id="" value="&nbsp;邮箱/手机号码/小米账号" style="border-radius: 10px 10px 0 0;border-bottom: 1px solid #E6E6E6;"/>
+				<input type="text" name="" id="" value="&nbsp;密码"  style="border-radius: 0 0 10px 10px;background-image: url(img/login/eye.png);"/>
+			</section>
+			
+			<!--登录按钮-->
+			<section class="btn-login">
+				<input type="button" name="" id="" value="立即登录" />
+			</section>
+			
+			<!--其他登录方式-->
+			<section class="login-other">
+					<hr />
+					<span>其他方式登录</span>
+					<hr />
+			</section>
+			
+			<!--qq 微博 支付宝-->
+			<section class="login-icon">
+				<div class="login-iconbox"><img src="img/login/qq.png" alt="" /></div>
+				<div class="login-iconbox"><img src="img/login/新浪微博.png" alt="" /></div>
+				<div class="login-iconbox"><img src="img/login/支付宝.png" alt="" /></div>
+			</section>
+			
+			<!--注册小米账号/忘记密码-->
+			<section class="login-hint">
+				<div>注册小米账号</div>
+				<div>忘记密码</div>
+			</section>
+			
+			
+</section>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="disk/js/jquery-3.2.1.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="disk/js/bootstrap.min.js"></script>
+	</body>
+
+</html>

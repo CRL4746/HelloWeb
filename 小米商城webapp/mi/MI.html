@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+		<title>首页</title>
+
+		<!-- Bootstrap -->
+		<link href="disk/css/bootstrap.min.css" rel="stylesheet">
+
+		<!--指定web app 
+			viewport: 视口
+  		initial-scale ： 初始化比例
+  		maximum-scale ： 最大缩放比例
+  		user-scalable : 是否允许用户缩放
+  		-->
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+		<!-- 指定页面为 Web App -->
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+
+		<!--引入less-->
+		<link rel="stylesheet" type="text/less" href="mi.less" />
+		<script src="disk/js/less.min.js" type="text/javascript" charset="utf-8"></script>
+		
+
+	</head>
+
+	<body>
+		<!--导航栏  :  占满全屏，伸缩-->
+		<section class="topnav">
+			<section class="navlis col-lg-6 col-lg-offset-3 col-md-12  col-sm-12 col-xs-12">
+
+				<div class="logo">
+					<img src="img/sy/logo.png" />
+				</div>
+				<!--搜索框-->
+				<div class="searchlis">
+					<div class="input-group">
+						<input type="text" class="form-control searchli" aria-label="...">
+					</div>
+				</div>
+				<!--登录-->
+				<a href="login.html" style="text-decoration: none;">
+				<div class="login">
+					登录
+				</div>
+				</a>
+			</section>
+		</section>
+
+		<!--内容页   大中屏时，占3格，小屏以下占全屏-->
+		<section class="contentinfo col-lg-6 col-lg-offset-3 col-md-12  col-sm-12 col-xs-12">
+
+			<!--轮播图-->
+			<div id="carousel-example-generic" class="carousel slide loop" data-ride="carousel">
+				<!-- Indicators -->
+				<ol class="carousel-indicators" style="display: flex;justify-content: flex-end;">
+					<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+				</ol>
+
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner" role="listbox">
+					<div class="item active">
+						<img src="img/lbt/1.jpg" alt="...">
+						<div class="carousel-caption">
+						</div>
+					</div>
+					<div class="item">
+						<img src="img/lbt/2.jpg" alt="...">
+						<div class="carousel-caption">
+						</div>
+					</div>
+					<div class="item">
+						<img src="img/lbt/3.jpg" alt="...">
+						<div class="carousel-caption">
+						</div>
+					</div>
+					<div class="item">
+						<img src="img/lbt/4.jpg" alt="...">
+						<div class="carousel-caption">
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<!--商城早报-->
+			<section class="moningpaper" style="display: flex;">
+				<div style="height: 7vh;width: 15vw; line-height: 6.5vh;">
+					<img src="img/sy/sc.png" style="width: 11vh;" />
+				</div>
+				<div style="height: 7vh;width: 85vw;margin: -2px 0 0 40px; white-space: nowrap;">
+					<!--*************商城早报文本动画*****************-->
+					<div id="carousel-example-generic" class="cartoon2 carousel slide " data-ride="carousel">
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner" role="listbox" style="display: flex;line-height: 7vh;">
+							<div class="item active">
+								<p>五月不减肥六月徒悲伤 小米体脂秤评测解析</p>
+							</div>
+							<div class="item">
+								<p>小编教你如何科学的设置一台小米6</p>
+							</div>
+							<div class="item">
+								<p>小米要搞大事情 小米Max 2发布会下午见</p>
+							</div>
+						</div>
+					</div>
+
+			</section>
+
+			<!--1+2-->
+			<section class="yje">
+				<div class="yjecon leftbox">
+					<img src="img/sy/l1.jpg" />
+				</div>
+				<div class="yjecon rightbox">
+					<div>
+						<img src="img/sy/r1.jpg" />
+					</div>
+					<div style="margin-top: 1.3%;">
+						<img src="img/sy/r2.jpg" />
+					</div>
+				</div>
+			</section>
+
+			<!--小横幅-->
+			<section class="xhf">
+				<img src="img/sy/xhf.jpg" />
+			</section>
+
+			<!--大横幅-->
+			<section class="xhf">
+				<img src="img/sy/dhf.jpg" />
+			</section>
+
+			<!--1+1-->
+			<section class="yjy">
+				<!--左图-->
+				<div class="yjy-box">
+					<img src="img/sy/34eca9d1-1a85-5edd-8b15-186295dfa6ab.webp.jpg" />
+					<div class="yjy-title">小米5c 64GB</div>
+					<div class="yjy-text"><small style="color: grey;">又轻又薄的拍照手机</small></div>
+					<div class="yjy-money">1499</div>
+				</div>
+				<!--右图-->
+				<div class="yjy-box">
+					<img src="img/sy/24a3df8b-415c-a7df-96b6-a125d9e91746.webp.jpg" />
+					<div class="yjy-title">小米路由器3</div>
+					<div class="yjy-text"><small style="color: grey;">全向高增益4天线</small></div>
+					<div class="yjy-money">149</div>
+				</div>
+
+			</section>
+
+			<!--1+1-->
+			<section class="yjy">
+				<!--左图-->
+				<div class="yjy-box">
+					<img src="img/sy/34eca9d1-1a85-5edd-8b15-186295dfa6ab.webp.jpg" />
+					<div class="yjy-title">小米5c 64GB</div>
+					<div class="yjy-text"><small style="color: grey;">又轻又薄的拍照手机</small></div>
+					<div class="yjy-money">1499</div>
+				</div>
+				<!--右图-->
+				<div class="yjy-box">
+					<img src="img/sy/24a3df8b-415c-a7df-96b6-a125d9e91746.webp.jpg" />
+					<div class="yjy-title">小米路由器3</div>
+					<div class="yjy-text"><small style="color: grey;">全向高增益4天线</small></div>
+					<div class="yjy-money">149</div>
+				</div>
+
+			</section>
+
+			<!--1+1-->
+			<section class="yjy">
+				<!--左图-->
+				<div class="yjy-box">
+					<img src="img/sy/34eca9d1-1a85-5edd-8b15-186295dfa6ab.webp.jpg" />
+					<div class="yjy-title">小米5c 64GB</div>
+					<div class="yjy-text"><small style="color: grey;">又轻又薄的拍照手机</small></div>
+					<div class="yjy-money">1499</div>
+				</div>
+				<!--右图-->
+				<div class="yjy-box">
+					<img src="img/sy/24a3df8b-415c-a7df-96b6-a125d9e91746.webp.jpg" />
+					<div class="yjy-title">小米路由器3</div>
+					<div class="yjy-text"><small style="color: grey;">全向高增益4天线</small></div>
+					<div class="yjy-money">149</div>
+				</div>
+
+			</section>
+
+			<!--小横幅-->
+			<section class="xhf">
+				<img src="img/sy/xhf.jpg" />
+			</section>
+
+			<!--大横幅-->
+			<section class="xhf">
+				<img src="img/sy/dhf.jpg" />
+			</section>
+
+			<!--1+1-->
+			<section class="yjy">
+				<!--左图-->
+				<div class="yjy-box">
+					<img src="img/sy/34eca9d1-1a85-5edd-8b15-186295dfa6ab.webp.jpg" />
+					<div class="yjy-title">小米5c 64GB</div>
+					<div class="yjy-text"><small style="color: grey;">又轻又薄的拍照手机</small></div>
+					<div class="yjy-money">1499</div>
+				</div>
+				<!--右图-->
+				<div class="yjy-box">
+					<img src="img/sy/24a3df8b-415c-a7df-96b6-a125d9e91746.webp.jpg" />
+					<div class="yjy-title">小米路由器3</div>
+					<div class="yjy-text"><small style="color: grey;">全向高增益4天线</small></div>
+					<div class="yjy-money">149</div>
+				</div>
+
+			</section>
+
+			<!--1+1-->
+			<section class="yjy">
+				<!--左图-->
+				<div class="yjy-box">
+					<img src="img/sy/34eca9d1-1a85-5edd-8b15-186295dfa6ab.webp.jpg" />
+					<div class="yjy-title">小米5c 64GB</div>
+					<div class="yjy-text"><small style="color: grey;">又轻又薄的拍照手机</small></div>
+					<div class="yjy-money">1499</div>
+				</div>
+				<!--右图-->
+				<div class="yjy-box">
+					<img src="img/sy/24a3df8b-415c-a7df-96b6-a125d9e91746.webp.jpg" />
+					<div class="yjy-title">小米路由器3</div>
+					<div class="yjy-text"><small style="color: grey;">全向高增益4天线</small></div>
+					<div class="yjy-money">149</div>
+				</div>
+
+			</section>
+
+			<!--1+1-->
+			<section class="yjy">
+				<!--左图-->
+				<div class="yjy-box">
+					<img src="img/sy/34eca9d1-1a85-5edd-8b15-186295dfa6ab.webp.jpg" />
+					<div class="yjy-title">小米5c 64GB</div>
+					<div class="yjy-text"><small style="color: grey;">又轻又薄的拍照手机</small></div>
+					<div class="yjy-money">1499</div>
+				</div>
+				<!--右图-->
+				<div class="yjy-box">
+					<img src="img/sy/24a3df8b-415c-a7df-96b6-a125d9e91746.webp.jpg" />
+					<div class="yjy-title">小米路由器3</div>
+					<div class="yjy-text"><small style="color: grey;">全向高增益4天线</small></div>
+					<div class="yjy-money">149</div>
+				</div>
+
+			</section>
+
+			<!--更多新品-->
+			<div class="moreinfo">
+				<a href="">更多内容 ></a>
+			</div>
+
+			<!--小横幅-->
+			<section class="xhf">
+				<img src="img/sy/xhf.jpg" />
+			</section>
+
+			<!--大横幅-->
+			<section class="xhf">
+				<img src="img/sy/dhf.jpg" />
+			</section>
+
+			<!--左右方块-->
+			<section class="square">
+				<div class="squarebox">
+					<img src="img/sy/c72ee0ac-caf0-ada2-92af-a71e98d6396a.webp.jpg" />
+					<span>立减20</span>
+				</div>
+				<div class="squarebox">
+					<h1></h1>
+					<h5>&emsp;米兔定位电话</h5>
+					<p>&emsp;高清双向通话，五重精准定位，十天超长待机</p>
+					<h4>&emsp;&yen;149 </h4><del> &yen;169</del>
+				</div>
+			</section>
+
+			<!--左右方块-->
+			<section class="square">
+				<div class="squarebox">
+					<h1></h1>
+					<h5>&emsp;米兔定位电话</h5>
+					<p>&emsp;高清双向通话，五重精准定位，十天超长待机</p>
+					<h4>&emsp;&yen;149 </h4><del> &yen;169</del>
+				</div>
+				<div class="squarebox">
+					<img src="img/sy/c72ee0ac-caf0-ada2-92af-a71e98d6396a.webp.jpg" />
+					<span>立减20</span>
+				</div>
+			</section>
+
+			<!--左右方块-->
+			<section class="square">
+				<div class="squarebox">
+					<img src="img/sy/c72ee0ac-caf0-ada2-92af-a71e98d6396a.webp.jpg" />
+					<span>立减20</span>
+				</div>
+				<div class="squarebox">
+					<h1></h1>
+					<h5>&emsp;米兔定位电话</h5>
+					<p>&emsp;高清双向通话，五重精准定位，十天超长待机</p>
+					<h4>&emsp;&yen;149 </h4><del> &yen;169</del>
+				</div>
+			</section>
+
+			<!--更多米家产品-->
+			<div class="moreinfo">
+				<a href="">更多米家产品 ></a>
+			</div>
+			
+			<!--大横幅-->
+			<section class="xhf">
+				<img src="img/sy/ctlg.webp.jpg" />
+			</section>
+			
+			<!--左右长图-->
+			<section class="square">
+				<div class="squarebox">
+					<img src="img/sy/ct2.webp.jpg" />
+				</div>
+				<div class="squarebox">
+					<img src="img/sy/ct.webp.jpg" />
+				</div>
+			</section>
+			
+			<!--左右长图-->
+			<section class="square">
+				<div class="squarebox">
+					<img src="img/sy/ct3.webp.jpg" />
+				</div>
+				<div class="squarebox">
+					<img src="img/sy/ct4.webp.jpg" />
+				</div>
+			</section>
+			
+			<!--猜你喜欢-->
+			<section class="xhf">
+				<img src="img/sy/cn.jpg" />
+			</section>
+			
+			<!--大图-->
+			<section class="xhf">
+				<img src="img/sy/dt.webp.jpg" />
+			</section>
+			
+			<!--追剧神器-->
+			<section class="xhf">
+				<img src="img/sy/zs.png" />
+			</section>
+			<section class="zs-content">
+				<div class="zs-left">
+					<img src="img/sy/zs1.webp.jpg" alt="" />
+					<div>&emsp;小米5s Plus</div>
+					<h4>&emsp;&yen;149</h4>
+				</div>
+				<div class="zs-right">
+					<img src="img/sy/zs2.webp.jpg" alt="" />
+					<div>&emsp;小米5s Plus</div>
+					<h4>&emsp;&yen;149</h4>
+				</div>
+			</section>
+			<section class="zs-content">
+				<div class="zs-right">
+					<img src="img/sy/zs2.webp.jpg" alt="" />
+					<div>&emsp;小米5s Plus</div>
+					<h4>&emsp;&yen;149</h4>
+				</div>
+				<div class="zs-left">
+					<img src="img/sy/zs1.webp.jpg" alt="" />
+					<div>&emsp;小米5s Plus</div>
+					<h4>&emsp;&yen;149</h4>
+				</div>
+			</section>
+			
+			
+			<!--大图-->
+			<section class="xhf">
+				<img src="img/sy/dt.webp.jpg" />
+			</section>
+			
+			<!--大图-->
+			<section class="xhf">
+				<img src="img/sy/zhichang.png" />
+			</section>
+			<section class="xhf">
+				<img src="img/sy/zhichang1webp.webp.jpg" />
+			</section>
+			
+			<!--1+1-->
+			<section class="yjy">
+				<!--左图-->
+				<div class="yjy-box">
+					<img src="img/sy/boto1.webp.jpg" />
+					<div class="yjy-title">小米空气净化器滤芯</div>
+					<div class="yjy-text"><small style="color: grey;">3层高效净化悬浮物</small></div>
+					<div class="yjy-money"> &yen;149</div>
+				</div>
+				<!--右图-->
+				<div class="yjy-box">
+					<img src="img/sy/boto2.webp.jpg" />
+					<div class="yjy-title">净化器滤芯 抗菌版</div>
+					<div class="yjy-text"><small style="color: grey;">净化室内空气</small></div>
+					<div class="yjy-money"> &yen;159</div>
+				</div>
+
+			</section>
+
+
+
+		</section>
+			<!--底部  占满全屏，伸缩-->
+			<section class="footombar">
+				<a href="MI.html">
+					<div class="foot">
+						<div style="background-image: url(img/sy/syon.png);" class="imgbox imgbox1"></div>
+						<a href="">首页</a>
+					</div>
+				</a>
+				<a href="classify.html">
+					<div class="foot">
+						<div style="background-image: url(img/sy/fl.png);" class="imgbox imgbox2"></div>
+						<a href="">分类</a>
+					</div>
+				</a>
+				<a href="car.html">
+					<div class="foot">
+						<div style="background-image: url(img/sy/gw.png);" class="imgbox imgbox3"></div>
+						<a href="car.html">购物车</a>
+					</div>
+				</a>
+				<a href="self.html">
+					<div class="foot">
+						<div style="background-image: url(img/sy/w.png);" class="imgbox imgbox4"></div>
+						<a href="self.html">我</a>
+					</div>
+				</a>
+			</section>
+
+			<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+			<script src="disk/js/jquery-3.2.1.js"></script>
+			<!-- Include all compiled plugins (below), or include individual files as needed -->
+			<script src="disk/js/bootstrap.min.js"></script>
+			<script type="text/javascript">
+				$('.cartoon1').carousel({
+					interval: 1500
+				})
+				$('.cartoon2').carousel({
+					interval: 1800
+				})
+			</script>
+	</body>
+
+</html>

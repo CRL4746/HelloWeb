@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+		<title>商品分栏</title>
+		<!-- Bootstrap -->
+		<link href="disk/css/bootstrap.min.css" rel="stylesheet">
+		<!--指定web app 
+			viewport: 视口
+  		initial-scale ： 初始化比例
+  		maximum-scale ： 最大缩放比例
+  		user-scalable : 是否允许用户缩放
+  		-->
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+		<!-- 指定页面为 Web App -->
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+
+		<!--引入less-->
+		<link rel="stylesheet" type="text/less" href="mi.less" />
+		<script src="disk/js/less.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			body {
+				background-color: white;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--内容页   大中屏时，占3格，小屏以下占全屏-->
+		<section class="flcontentinfo col-lg-6 col-lg-offset-3 col-md-12  col-sm-12 col-xs-12" style="margin-bottom: 16vw;">
+			<!--顶栏-->
+			<section class="flnav">
+				<a href="MI.html" class="flback" style="text-decoration: none;">&emsp;<img src="img/ic.png" /></a>
+				<h4>购物车</h4>
+				<a href="" class="flsearch"><span class="glyphicon glyphicon-search"></span>&emsp;</a>
+			</section>
+			
+			<!--登录后享受更多优惠-->
+			<section class="dsy-toplis">
+				<div class="dsy-lefttitle">
+					<h4>&emsp;登录后享受更多优惠</h4>
+				</div>
+				<div class="dsy-righttitle">
+					<a href="login.html">去登录&nbsp;>&nbsp;</a>
+				</div>
+			</section>
+			
+			<!--购物车还是空的-->
+			<section class="dsy-smtitle">
+				<a class="smtitle-content">
+					<img src="img/dsy/购物车.png"/>
+					<small>购物车还是空的</small>
+					<span>&emsp;去逛逛&emsp;</span>
+				</a>
+			</section>
+			
+			<!--标题加方块图片-->
+			<section class="dsy-square">
+				<h4>&emsp;为你推荐</h4>
+				<div class="dsy-squares">
+					<div class="dsy-squarebox">
+						<img src="img/dsy/f1.jpg"/>
+						<p>&emsp;12.5"笔记本 256GB</p>
+						<h4>&emsp;&yen;4999</h4>
+					</div>
+					<div class="dsy-squarebox">
+						<img src="img/dsy/f2.jpg"/>
+						<p>&emsp;12.5"笔记本 256GB</p>
+						<h4>&emsp;&yen;4999</h4>
+					</div>
+				</div>
+				
+				<div class="dsy-squares">
+					<div class="dsy-squarebox">
+						<img src="img/dsy/f1.jpg"/>
+						<p>&emsp;12.5"笔记本 256GB</p>
+						<h4>&emsp;&yen;4999</h4>
+					</div>
+					<div class="dsy-squarebox">
+						<img src="img/dsy/f2.jpg"/>
+						<p>&emsp;12.5"笔记本 256GB</p>
+						<h4>&emsp;&yen;4999</h4>
+					</div>
+				</div>
+				
+				<div class="dsy-squares">
+					<div class="dsy-squarebox">
+						<img src="img/dsy/f1.jpg"/>
+						<p>&emsp;12.5"笔记本 256GB</p>
+						<h4>&emsp;&yen;4999</h4>
+					</div>
+					<div class="dsy-squarebox">
+						<img src="img/dsy/f2.jpg"/>
+						<p>&emsp;12.5"笔记本 256GB</p>
+						<h4>&emsp;&yen;4999</h4>
+					</div>
+				</div>
+				
+				<div class="dsy-squares">
+					<div class="dsy-squarebox">
+						<img src="img/dsy/f1.jpg"/>
+						<p>&emsp;12.5"笔记本 256GB</p>
+						<h4>&emsp;&yen;4999</h4>
+					</div>
+					<div class="dsy-squarebox">
+						<img src="img/dsy/f2.jpg"/>
+						<p>&emsp;12.5"笔记本 256GB</p>
+						<h4>&emsp;&yen;4999</h4>
+					</div>
+				</div>
+				
+				<div class="dsy-squares">
+					<div class="dsy-squarebox">
+						<img src="img/dsy/f1.jpg"/>
+						<p>&emsp;12.5"笔记本 256GB</p>
+						<h4>&emsp;&yen;4999</h4>
+					</div>
+					<div class="dsy-squarebox">
+						<img src="img/dsy/f2.jpg"/>
+						<p>&emsp;12.5"笔记本 256GB</p>
+						<h4>&emsp;&yen;4999</h4>
+					</div>
+				</div>
+				
+				<div class="dsy-squares">
+					<div class="dsy-squarebox">
+						<img src="img/dsy/f1.jpg"/>
+						<p>&emsp;12.5"笔记本 256GB</p>
+						<h4>&emsp;&yen;4999</h4>
+					</div>
+					<div class="dsy-squarebox">
+						<img src="img/dsy/f2.jpg"/>
+						<p>&emsp;12.5"笔记本 256GB</p>
+						<h4>&emsp;&yen;4999</h4>
+					</div>
+				</div>
+				
+				<div class="dsy-squares">
+					<div class="dsy-squarebox">
+						<img src="img/dsy/f1.jpg"/>
+						<p>&emsp;12.5"笔记本 256GB</p>
+						<h4>&emsp;&yen;4999</h4>
+					</div>
+					<div class="dsy-squarebox">
+						<img src="img/dsy/f2.jpg"/>
+						<p>&emsp;12.5"笔记本 256GB</p>
+						<h4>&emsp;&yen;4999</h4>
+					</div>
+				</div>
+			</section>
+
+
+
+		</section>
+
+		<!--底部  占满全屏，伸缩-->
+		<section class="footombar">
+			<a href="MI.html">
+				<div class="foot">
+					<div style="background-image: url(img/sy/sy.png);" class="imgbox imgbox1"></div>
+					<a href="">首页</a>
+				</div>
+			</a>
+			<a href="classify.html">
+				<div class="foot">
+					<div style="background-image: url(img/sy/fl.png);" class="imgbox imgbox2"></div>
+					<a href="">分类</a>
+				</div>
+			</a>
+			<a href="car.html">
+				<div class="foot">
+					<div style="background-image: url(img/sy/gwon.png);" class="imgbox imgbox3"></div>
+					<a href="car.html">购物车</a>
+				</div>
+			</a>
+			<a href="self.html">
+				<div class="foot">
+					<div style="background-image: url(img/sy/w.png);" class="imgbox imgbox4"></div>
+					<a href="self.html">我</a>
+				</div>
+			</a>
+		</section>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="disk/js/jquery-3.2.1.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="disk/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			$('.cartoon1').carousel({
+				interval: 1500
+			})
+			$('.cartoon2').carousel({
+				interval: 1800
+			})
+		</script>
+	</body>
+
+</html>

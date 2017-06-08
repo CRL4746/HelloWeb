@@ -1,0 +1,608 @@
+@color1: #FF6204;
+@color2: #EB6054;
+@color3: #F5F5F5;
+@color4: #F2F2F2; //商品分类导航栏
+body {
+    margin: 0;
+    padding: 0;
+    background-color: @color3;
+}
+
+* {
+    cursor: pointer;
+}
+
+html {
+    //      font-size: 62.5%;
+}
+
+//头部导航条
+.topnav {
+    height: 7vh;
+    width: 100%;
+    //  background-color: #E58335;
+    background-color: transparent;
+    display: flex;
+    position: fixed;
+    top: 0;
+    //三个组件的容器
+    .navlis {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        //logo
+        .logo img {
+            width: 2.5rem;
+        }
+        //搜索框
+        .searchlis {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            .input-group {
+                width: 90%;
+                .searchli {
+                    width: 100%;
+                    border-radius: 3px;
+                }
+            }
+        }
+        //登录
+        .login {
+            color: white;
+            white-space: nowrap;
+            font-size: 1.8rem;
+        }
+    }
+}
+
+//内容页
+.contentinfo {
+    margin-bottom: 10vh;
+    z-index: -999;
+    padding: 0;
+    position: relative;
+    //1+2 内容页
+    .yje {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .yjecon {
+            width: 49.5%;
+            height: 100%;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    //小横幅
+    .xhf {
+        width: 100%;
+        margin-bottom: 5px;
+        img {
+            width: 100%;
+        }
+    }
+    //1+1
+    .yjy {
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        .yjy-box {
+            width: 49.5%;
+            .yjy-title,
+            .yjy-text,
+            .yjy-money {
+                margin-left: 1rem;
+                background-color: white;
+            }
+            .yjy-money {
+                font-size: 1.8rem;
+                color: @color1;
+            }
+        }
+        img {
+            width: 100%;
+        }
+    }
+    //查看更多
+    .moreinfo {
+        width: 100%;
+        text-align: center;
+        background-color: white;
+        a {
+            font-size: 1.5rem;
+            text-decoration: none;
+            line-height: 5rem;
+        }
+    }
+    //正方形排列
+    .square {
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        width: 100%;
+        .squarebox {
+            position: relative;
+            width: 50%;
+            //          padding: 1.2rem 0 0 1rem;
+            img {
+                width: 100%
+            }
+            h4 {
+                color: @color1;
+                display: inline-block;
+                margin: 0;
+            }
+            h5 {
+                margin: 0;
+            }
+            span {
+                text-align: center;
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: @color2;
+                width: 5.5rem;
+            }
+        }
+    }
+}
+
+//底部导航条
+.footombar {
+    z-index: 9999;
+    height: 9.2vh;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid #E0E0E0;
+    background-color: white;
+    //底部图标加标题容器
+    .foot {
+        height: 100%;
+        width: 24%;
+        text-align: center;
+        cursor: pointer;
+        //背景图片
+        .imgbox {
+            height: 60%;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: 2.2rem;
+            background-position: center;
+            margin-top: 2px;
+        }
+        .imgbox1:hover {
+            background-image: url(img/sy/syon.png) !important;
+        }
+        .imgbox1:active {
+            color: red;
+            background-image: url(img/sy/syon.png) !important;
+        }
+        .imgbox2:hover {
+            background-image: url(img/sy/flon.png) !important;
+        }
+        .imgbox3:hover {
+            background-image: url(img/sy/gwon.png) !important;
+        }
+        .imgbox4:hover {
+            background-image: url(img/sy/won.png) !important;
+        }
+        a {
+            margin-top: -2px;
+            text-decoration: none;
+        }
+        &:hover a {
+            color: @color1;
+        }
+    }
+}
+
+//第二页   商品分类
+.flcontentinfo {
+    padding: 0;
+    //顶栏
+    .flnav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: @color4;
+        z-index: 999999;
+        .flback {
+            display: flex;
+            align-items: center;
+            height: 6.8vh;
+            img {
+                height: 4.5vh;
+            }
+        }
+        h2 {
+            font-family: "宋体";
+        }
+        .flsearch {
+            height: 4.5vh;
+            line-height: 6.5vh;
+            span {
+                font-size: 2rem;
+                color: darkgray;
+            }
+        }
+    }
+    //内容页  左导航类  右内容页
+    .fl-content {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10vh;
+        //左边导航栏
+        .fl-leftnav {
+            width: 16vw;
+            height: 90vh;
+            display: flex;
+            position: fixed;
+            top: 0;
+//          z-index: -1;
+            flex-direction: column;
+            justify-content: space-around;
+            border-right: 1px solid gainsboro;
+            align-items: center;
+            .fl-li {
+                display: block;
+                cursor:ppointer; 
+                text-decoration:none; 
+                &:hover {
+                    color: @color1;
+                    font-size: 20px;
+                }
+            }
+        }
+        .rightcontent {
+            margin-left: 16vw;
+            width: 84vw;
+            z-index: -2;
+            .rightcontent-top {
+                width: 100%;
+                text-align: center;
+                img {
+                    width: 90%;
+                }
+            }
+            // 手机 模块
+            .fl-smtitle {
+                width: 100%;
+                text-align: center;
+                span {
+                    display: inline-block;
+                    line-height: 6.5rem;
+                    height: 6.5rem;
+                    color: gainsboro;
+                    font-weight: bolder;
+                }
+                //四张图片集合
+                .fl-phones {
+                    width: 100%;
+                    .phone-top {
+                        display: flex;
+                        justify-content: space-around;
+                        div {
+                            width: 20%;
+                            img {
+                                width: 100%;
+                            }
+                            small {
+                                color: darkgray;
+                                line-height: 5rem;
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                    .phone-bottom {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-around;
+                        div {
+                            width: 20%;
+                            img {
+                                width: 100%;
+                            }
+                            small {
+                                color: darkgray;
+                                line-height: 5rem;
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//第三页
+//登录后享受更多优惠
+.dsy-toplis {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 9vw;
+    font-size: 1.4rem;
+    white-space: nowrap;
+    .dsy-lefttitle {
+        width: 70%;
+        h4 {
+            font-size: 4vw;
+            font-weight: normal;
+        }
+    }
+    .dsy-righttitle {
+        text-align: right;
+        width: 30%;
+        cursor: pointer;
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+}
+
+//购物车还是空的
+.dsy-smtitle {
+    height: 10vw;
+    width: 100%;
+    background-color: #EBEBEB;
+    text-align: center;
+    line-height: 9.2vw;
+    .smtitle-content {
+        background-color: #EBEBEB;
+        height: 100%;
+        width: 50%;
+        span {
+            font-size: 1.5rem;
+            border: 1px solid gray;
+        }
+        img {
+            width: 5vw;
+            margin-top: -5px;
+        }
+        small {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+//标题加图片
+.dsy-square {
+    width: 100%;
+    .dsy-squares {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .dsy-squarebox {
+            width: 49.5%;
+            img {
+                width: 100%;
+            }
+            p {
+                font-size: 4vw;
+            }
+            h4 {
+                font-weight: normal;
+                color: red;
+                font-size: 4.5vw;
+            }
+        }
+    }
+}
+
+//第四页      
+.self-top {
+    background-image: url(img/dsy/backgroundimg.png);
+    background-repeat: repeat-x;
+    background-position: center;
+    width: 100%;
+    height: 20vw;
+    display: flex;
+    align-items: center;
+    color: white;
+    .self-topimg {
+        margin-left: 5vw;
+        height: 50%;
+        background-color: #FFB500;
+        border-radius: 50%;
+        img {
+            height: 100%;
+        }
+    }
+}
+
+//我的订单
+.self-content {
+    height: 10vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 4vw;
+    background-color: white;
+    border-bottom: 1px gainsboro solid;
+    .myorder-right {
+        display: block;
+    }
+}
+
+//三个图标
+.self-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 26vw;
+    width: 100%;
+    background-color: white;
+    margin-bottom: 10px;
+    .self-icon {
+        text-align: center;
+        width: 20%;
+        img {
+            width: 33%;
+        }
+        p {
+            text-align: center;
+            white-space: nowrap;
+        }
+    }
+}
+
+//我的优惠
+.self-discounts {
+    clear: both;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 14vw;
+    background-color: white;
+    .self-discount {
+        white-space: nowrap;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        img {
+            width: 30%;
+        }
+    }
+}
+
+.self-hr {
+    height: 1px;
+    background-color: lightgray;
+    width: 90%;
+    float: right;
+}
+
+.zs-content {
+    display: flex;
+    justify-content: space-between;
+    h4 {
+        color: @color1;
+    }
+    .zs-left {
+        width: 65.5%;
+        img {
+            width: 100%;
+        }
+        div {
+            margin: 10px 0 5px 0;
+        }
+    }
+    .zs-right {
+        width: 33%;
+        img {
+            width: 100%;
+        }
+        div {
+            margin: 10px 0 5px 0;
+        }
+    }
+}
+
+//登录页
+.login-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0 20px 0;
+
+}
+
+//二维码
+.code {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+//登录框
+.login-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    input {
+        width: 86%;
+        height: 4rem;
+        box-shadow: inset 0 0 0 white;
+        border:0px solid #DBDBDB;
+        color: #A9A9A9;
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: 3.5rem;
+    }
+}
+
+//登录按钮
+.btn-login {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: white;
+    input {
+        width: 86%;
+        height: 3.5rem;
+        background-color: #33B4FF;
+        border-radius: 20px;
+        border: 1px solid #33B4FF;
+    }
+}
+
+.login-other {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    hr {
+        width: 30%;
+        height: 1px;
+        border-top: 1px dashed gray;
+        display: block;
+
+    }
+    span {
+        text-align: center;
+        width: 26%;
+        display: block;
+        white-space: nowrap;
+        line-height: 3.6rem;
+    }
+}
+
+//三个图标
+.login-icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    .login-iconbox {
+        text-align: center;
+        width: 20%;
+        img {
+            width: 4rem;
+        }
+    }
+}
+
+//注册小米账号，忘记密码
+.login-hint {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    div {
+        text-align: center;
+        width: 30%;
+    }
+}

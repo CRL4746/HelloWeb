@@ -1,0 +1,70 @@
+@color1: #E58335;
+@color2: white;
+body {
+    margin: 0;
+    padding: 0;
+}
+
+//固定导航框
+nav {
+
+    height: 6vh;
+    background-color: @color1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    img {
+        width: 9vw;
+    }
+    .login {
+        color: @color2;
+        font-size: 5vw;
+        font-weight: 300;
+        white-space: nowrap;
+    }
+    input {
+        width: 55vw;
+    }
+}
+
+//轮播图
+
+
+
+
+
+//底栏
+footer {
+    border-top: 1px solid gray;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 9vh;
+    position: fixed;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-around;
+    div {
+        width: 25%;
+        height: 50px;
+        background-repeat: no-repeat;
+        background-position: center 4px;
+        background-size: 8vw;
+        position: relative;
+        &:active {
+            color: orange;
+            
+        }
+        &:visited {
+            color: orange;
+        }
+    }
+    span {
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+
